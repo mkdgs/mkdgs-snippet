@@ -1,0 +1,46 @@
+/* version:0.2
+ * - un fichier css qui marche avec tout nos formulaire
+ * - on indente les règles css selon leurs parentés 
+ */
+
+.eform {width:auto;font-size:13pt; color:black;}
+	.eform input {border:1px solid #b6b6b6; padding:4px; color:#5d5d5d;font-size:12pt;}
+	.eform input[type=text],.eform input[type=password] {  width:100%; }
+	.eform textarea{border:1px solid #b6b6b6; width:100%; padding:4px; height:200px; color:#5d5d5d;font-size:12pt;}
+	.eform option,.eform select{font-size:14pt!important;color:#143a50;}
+	.eform select{border:1px solid #b6b6b6;padding:4px;}
+	
+	/* les boites de form séparée en 2 colonnes */ 
+	.eform .box { font-size:0.85em; width:100%; }
+			/* propriétés commune aux 2 colonnes */ 
+			.eform .box > div { line-height:3em; margin:0 5px 1% 0; float:left; }			
+			/* premiere case */
+			.eform .box > div:first-child { width:25%;  text-align:right;}			
+			/* deuxieme case */
+			.eform .box > div + div {width:70%; text-align:center;}
+	
+	
+	/* les boites larges une seule colonne */
+	.eform .box-large { text-align:center; padding:10px 0px 5px 0px;font-size:0.85em; width:100%; }
+	
+	/* style bouton accepter */
+	.eform button.oui, .eform input.oui { cursor:pointer; background-color: #fff;color:#333;font-weight:bold;  width:30%; }
+		.eform button.oui:hover, .eform input.oui:hover { background-color: #464646;}
+	/* style bouton refuser */
+	.eform button.non, .eform input.non { background-color: #448100;width:30%;}
+		.eform button.non:hover, .eform input.non:hover { background-color: #448150;}
+	
+	/* style bouton neutre */
+	.eform button.osf, .eform input.osf { background-color: #00388A; width:30%;}
+		.eform button.osf:hover, .eform input.osf:hover { background-color: #00385A;}
+	
+	/* emplacement du message d'erreur de la validation */ 	
+	.eform .error {  }
+
+	/* jquery framework on surcharge les style 
+	http://wiki.jqueryui.com/w/page/12137970/jQuery-UI-CSS-Framework
+	.eform .ui-state-error { }
+	etc ... 
+	*/	
+	.eform .ui-widget { width:95%;margin:0 5px 5px 5px; }
+	.eform .ui-widget * { background-image:none; background-color:#FFE5E5; color:#730000; }
