@@ -1,0 +1,150 @@
+@CHARSET "UTF-8";
+/* ______
+*  BASICS set and reset tags
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;vertical-align: baseline;letter-spacing: 0;word-spacing: normal;line-height: 1em;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {	quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {	content: '';content: none;}
+table {	border-collapse: collapse;	border-spacing: 0;}
+html, body {font-size: 100%;/* WinIE text resize correction */}
+
+body {
+	line-height: 1.2;
+}
+* { font-family:"lucida grande",tahoma,verdana,arial,sans-serif; font-size: 1,2em;color: #333;}
+sup {font-size: 0.6em;vertical-align: super;}
+sub {font-size: 0.6em;vertical-align: bottom;}
+p { padding: 10px 8px 8px 16px;}
+h1,h2,h3,h4,h5,h6 {font-family:"lucida grande",tahoma,verdana,arial,sans-serif; color: #000; }
+h1 { font-size: 24px; padding: 10px 0 20px 0;}
+h2 { font-size: 22px; padding: 8px 0 18px 0;}
+h3 { font-size: 20px; padding: 6px 0 14px 0;}
+h4 { font-size: 18px; padding: 6px 0 12px 0;}
+h5 { font-size: 16px; padding: 6px 0 10px 0;}
+h6 { font-size: 14px; padding: 6px 0 8px 0;}
+h1 *,h2 *,h3 *,h4 *,h5 *, h6 * { font-size: inherit;}
+
+a { 
+	cursor: pointer;
+	color:#000;
+	text-decoration: none;
+}
+a:HOVER { 
+	text-decoration: underline;
+	color:#666666;	
+}
+
+button {
+	padding: 3px 3px 4px 3px;
+	border: 1px solid #999;
+	 -moz-box-sizing : border-box; 
+	 -webkit-box-sizing: border-box; 
+	 box-sizing: border-box; 
+}
+input {
+	padding: 3px 3px 4px 3px;
+	border: 1px solid #999;
+	 -moz-box-sizing : border-box; 
+	 -webkit-box-sizing: border-box; 
+	 box-sizing: border-box; 
+}
+textarea {
+	padding: 3px 3px 4px 3px;
+	border: 1px solid #999;
+	 -moz-box-sizing : border-box; 
+	 -webkit-box-sizing: border-box; 
+	 box-sizing: border-box; 
+}
+select {
+	background-color: fff;
+	color:#000;
+	padding:2px;
+}
+select > option { 
+	background-color: fff;
+	color:#000;
+	margin:5px;	
+	padding:2px;
+}
+select option:hover { background-color: #9BD5FF; }
+
+
+/*	_____
+*	TOOLS
+*/
+.fr {
+	float: right;
+	display: block;
+}
+.fl {
+	float: left;
+	display: block;
+}
+.cl {clear:left;}
+.cr {clear:right;}
+.cb {clear: both;}
+
+.pf {position: fixed;}
+.pr {position: relative;}
+.pa {position: absolute;}
+
+.tpl, .template, .hide {display:none;}
+
+.clearfix:after {clear: both;content: ".";display: block;font-size: 0;height: 0;line-height: 0;visibility: hidden;}
+.word-wrap {word-wrap: break-word;}
+
+/* 32 GRID */		
+.grid { margin:0;  width: 100%;}
+.grid > div { float: left;padding:0; position: relative;min-height: 100%;min-height: 1px;overflow: hidden; }
+.g-0 {width: -1%;margin-left:1%;}
+.g-1 {width: 2.125%;margin-left:1%;}
+.g-2 {width: 5.25%;margin-left:1%;}
+.g-3 {width: 8.375%;margin-left:1%;}
+.g-4 {width: 11.5%;margin-left:1%;}
+.g-5 {width: 14.625%;margin-left:1%;}
+.g-6 {width: 17.75%;margin-left:1%;}
+.g-7 {width: 20.875%;margin-left:1%;}
+.g-8 {width: 24%;margin-left:1%;}
+.g-9 {width: 27.125%;margin-left:1%;}
+.g-10 {width: 30.25%;margin-left:1%;}
+.g-11 {width: 33.375%;margin-left:1%;}
+.g-12 {width: 36.5%;margin-left:1%;}
+.g-13 {width: 39.625%;margin-left:1%;}
+.g-14 {width: 42.75%;margin-left:1%;}
+.g-15 {width: 45.875%;margin-left:1%;}
+.g-16 {width: 49%;margin-left:1%;}
+.g-17 {width: 52.125%;margin-left:1%;}
+.g-18 {width: 55.25%;margin-left:1%;}
+.g-19 {width: 58.375%;margin-left:1%;}
+.g-20 {width: 61.5%;margin-left:1%;}
+.g-21 {width: 64.625%;margin-left:1%;}
+.g-22 {width: 67.75%;margin-left:1%;}
+.g-23 {width: 70.875%;margin-left:1%;}
+.g-24 {width: 74%;margin-left:1%;}
+.g-25 {width: 77.125%;margin-left:1%;}
+.g-26 {width: 80.25%;margin-left:1%;}
+.g-27 {width: 83.375%;margin-left:1%;}
+.g-28 {width: 86.5%;margin-left:1%;}
+.g-29 {width: 89.625%;margin-left:1%;}
+.g-30 {width: 92.75%;margin-left:1%;}
+.g-31 {width: 95.875%;margin-left:1%;}
+.g-32 {width: 99%;margin-left:1%;}
+.grid .first {margin-left: 0;}
