@@ -8,3 +8,9 @@ $(function(){
 	    }
 	});
 });
+
+for i8 and older if you use <base > fix the base bug:
+var base = $("base");
+$(this).click(function () {
+	window.location.href = (base ? base.attr("href") : "")+link;
+});
