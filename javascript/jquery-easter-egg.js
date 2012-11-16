@@ -30,3 +30,17 @@
 	$(document).ready(function() {
 		setTimeout(function() { intiEaster(); }, 500); 
 	});
+	
+
+
+
+function randCounter(el) { 
+	$(el).each(function() { 
+		var v = $(this).html().getInt();
+		v += parseInt(Math.random()*2);   
+		$(this).html(v);
+	});
+	var timer = parseInt(Math.random()*1000);
+	setTimeout("randCounter('"+el+"')", timer);
+}
+randCounter('.randCounter');
