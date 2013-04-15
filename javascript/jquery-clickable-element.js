@@ -8,7 +8,8 @@ $(function(){
 	    if( !link ) link = $(this).find('[href]').first().attr('href');
 	    if ( link ) {	        
 	        $(this).click(function () {
-	        	window.location.href = (base ? base.attr("href") : "")+link;
+		        if( link.indexOf('http') === 0 ) window.location.href = link;
+		        else window.location.href = (base ? base.attr("href") : "")+link;
 	        });
 	    }
 	});
