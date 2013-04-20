@@ -4,11 +4,25 @@
  */
 
 .eform {width:auto;font-size:13pt; color:black;}
+	.eform input, .eform select, .eform textarea { /* global input style */
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;		
+	}
 	.eform input {border:1px solid #b6b6b6; padding:4px; color:#5d5d5d;font-size:12pt;}
 	.eform input[type=text],.eform input[type=password] {  width:100%; }
 	.eform textarea{border:1px solid #b6b6b6; width:100%; padding:4px; height:200px; color:#5d5d5d;font-size:12pt;}
 	.eform option,.eform select{font-size:14pt!important;color:#143a50;}
-	.eform select{border:1px solid #b6b6b6;padding:4px;}
+	.eform select{border:1px solid #b6b6b6;padding:4px;
+		      -ms-box-sizing:content-box; /* FIX width of select*/
+  		      -moz-box-sizing:content-box;
+                      box-sizing:content-box;
+                      -webkit-box-sizing:content-box;
+	}
+	
+	.eform select.error, .eform input.error, .eform textarea.error {
+		border-bottom:1px red dashed;
+	}
 	
 	/* les boites de form séparée en 2 colonnes */ 
 	.eform .box { font-size:0.85em; width:100%; }
