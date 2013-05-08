@@ -2,10 +2,13 @@
 * récupérer l'url du script (pour autoload)
 *
 * http://stackoverflow.com/questions/2976651/javascript-how-do-i-get-the-url-of-script-being-called
+* http://stackoverflow.com/questions/984510/what-is-my-script-src-url
 */
-var getScriptURL = (function() {
-    var scripts = document.getElementsByTagName('script');
-    var index = scripts.length - 1;
-    var myScript = scripts[index];
-    return function() { return myScript.src; };
+var scriptUrl = (function() {
+		var ls = document.getElementsByTagName('script'),s = ls[ls.length - 1];
+	    if (s.getAttribute.length !== undefined) return s.src
+	    return s.getAttribute('src', -1);
 })();
+	
+var scriptPath =  scriptUrl.substring(0, scriptUrl.lastIndexOf('/'))+"/";
+
