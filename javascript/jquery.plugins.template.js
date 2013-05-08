@@ -8,6 +8,15 @@
 	var methods = {};   
 	var pluginName = 'myPlugin';
 	
+	// répupère l'url du script (pour autoload)
+	var scriptUrl = (function() {
+	    var ls = document.getElementsByTagName('script'),s = ls[ls.length - 1];
+	    if (s.getAttribute.length !== undefined) return s.src
+	    return s.getAttribute('src', -1);
+	})();
+	
+	var scriptPath =  scriptUrl.substring(0, scriptUrl.lastIndexOf('/'))+"/";
+	
 	methods.init = function(params) {	    
 	    return this.each(function() { 
 	 		var op;
