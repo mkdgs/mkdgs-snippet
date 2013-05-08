@@ -5,10 +5,17 @@
 * http://stackoverflow.com/questions/984510/what-is-my-script-src-url
 */
 var scriptUrl = (function() {
-		var ls = document.getElementsByTagName('script'),s = ls[ls.length - 1];
-	    if (s.getAttribute.length !== undefined) return s.src
-	    return s.getAttribute('src', -1);
+		if( s = document.currentScript ) {
+			return s.src; 
+		}
+		else { 
+			var ls = document.getElementsByTagName('script'),s = ls[ls.length - 1];
+	    	if (s.getAttribute.length !== undefined) return s.src
+		    return s.getAttribute('src', -1);
+		}
 })();
 	
-var scriptPath =  scriptUrl.substring(0, scriptUrl.lastIndexOf('/'))+"/";
+var scriptPath =  scriptUrl.substring(0, scriptUrl.lastIndexOf('/'))+"/";	
+console.log(scriptPath);
+
 
