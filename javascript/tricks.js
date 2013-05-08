@@ -16,6 +16,5 @@ var scriptUrl = (function() {
 })();
 	
 var scriptPath =  scriptUrl.substring(0, scriptUrl.lastIndexOf('/'))+"/";	
-console.log(scriptPath);
-
-
+console.log(script
+onload="document.currentScript=this;loadImage();" width="100" height="132">
