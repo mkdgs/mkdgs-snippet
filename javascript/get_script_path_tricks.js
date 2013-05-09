@@ -16,5 +16,10 @@ var scriptUrl = (function() {
 })();
 	
 var scriptPath =  scriptUrl.substring(0, scriptUrl.lastIndexOf('/'))+"/";	
-console.log(script
-onload="document.currentScript=this;loadImage();" width="100" height="132">
+
+console.log(scriptPath);
+/*
+* tester si on ne peut pas définir document.currentScript 
+* avec l'évenement load pour def et asnyc
+*/
+<script src="" onload="document.currentScript=this;" defer="defer"/> </script>
