@@ -43,12 +43,12 @@
 	    return this.each(function() { 
 	 		var op;
 			if (!op) {
-				var options = {
+			   var options = {
 						'default'	: 'option'
-				};
-				op = jQuery.extend(options, params);				
-			    op.$el = $(this);
-			    // set + config
+			   };
+			   op = jQuery.extend(options, params);				
+			   op.$el = $(this);
+			   // set + config
 			    
 			} else op = $(this).data(pluginName);
 
