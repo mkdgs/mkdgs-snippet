@@ -16,7 +16,7 @@
 	 * this work with async and defer (but your script MUST have a unique filemane)
 	 * mozilla support document.currentScript and we use it, if is set
 	 */
-	var scriptFilename = 'jquery.plugins.template.js';	
+	var scriptFilename = 'jquery.plugins.template.js'; // don't forget to set the filename 
 	var scriptUrl = (function() {
 		if( document.currentScript ) { // support defer & async (mozilla only)
 			return document.currentScript.src; 
