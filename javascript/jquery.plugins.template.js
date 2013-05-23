@@ -1,6 +1,6 @@
 /**
  * @author mickael desgranges
- * @desc http://desgranges.biz
+ * @desc http://mkdgs.fr
  * @version 1.3
  */
 (function( $ ){	
