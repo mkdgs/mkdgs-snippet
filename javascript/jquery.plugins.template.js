@@ -1,12 +1,12 @@
 /**
  * @author mickael desgranges
  * @desc http://desgranges.biz
- * @version 1.1
+ * @version 1.3
  */
 (function( $ ){	
 	"use strict";
 	var methods = {};   
-	var pluginName = 'myPlugin';
+	var pluginName = 'myPlugin'; // set plugin name
 	
 	/* see	
 	 * http://stackoverflow.com/questions/984510/what-is-my-script-src-url/984656#984656
@@ -41,27 +41,30 @@
 	
 	methods.init = function(params) {	    
 	    return this.each(function() { 
-	 		var op;
-			if (!op) {
-			   var options = {
-						'default'	: 'option'
-			   };
-			   op = jQuery.extend(options, params);				
-			   op.$el = $(this);
-			   // set + config
-			    
-			} else op = $(this).data(pluginName);
-
-			// code here
+	    		// an instance already exist ?
+	 		var op = $(this).data(pluginName);
+			if (!op) return true; //IHAZ ONE CONTINUE
 			
-		   	// set instance
-		   	$(this).data(pluginName, op);	   	
+			// set + config
+			var options = {
+						'default'	: 'option'
+			};
+		        op = jQuery.extend(options, params);				
+			op.$el = $(this);
+		        			    
+			// awesome code here
+			
+		   	// set data instance
+		   	$(this).data(pluginName, op);		   		   	
 	    });	
 	};
 	
 	methods.myMethod = function(arg) {		
 		 var op = $(this).data(pluginName);		
 		 // code here
+		 
+		 // set data instance
+		 // if any change inside $(this).data(pluginName, op);	
 	};
 	
 	$.fn[pluginName] = function(m) {
