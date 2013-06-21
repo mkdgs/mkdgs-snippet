@@ -35,6 +35,7 @@
 				}
 			} 
 		}
+		return '';
 	})();
 		
 	var scriptPath =  scriptUrl.substring(0, scriptUrl.lastIndexOf('/'))+"/";
