@@ -35,7 +35,7 @@
 				for (i = 0; i < l; i++) {
 					s = null;
 					if (ls[i].getAttribute.length !== undefined) { 
-						s = ls[i].getAttribute(attr, -1); 					
+						s = ls[i].getAttribute(attr, 2); 					
 					}				
 					if (!s)	continue; // tag with no src
 					nf = s;
