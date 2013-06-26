@@ -5,10 +5,11 @@
  */
 (function( $ ){	
 	"use strict";
-	var methods = {};   
+	var methods    = {};   
 	var pluginName = 'myPlugin'; // set plugin name
 	
-	/* see	
+	/* Lazy Loader get script path 
+	 * see	
 	 * http://stackoverflow.com/questions/984510/what-is-my-script-src-url/984656#984656
 	 * http://www.glennjones.net/Post/809/getAttributehrefbug.htm
 	 * 
