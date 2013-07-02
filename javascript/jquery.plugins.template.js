@@ -62,7 +62,7 @@
 	    return this.each(function() { 
 	    		// an instance already exist ?
 	 		var op = $(this).data(pluginName);
-			if (!op) return true; //IHAZ ONE CONTINUE
+			if (op) return true; //IHAZ ONE CONTINUE
 			
 			// set + config
 			var options = {
