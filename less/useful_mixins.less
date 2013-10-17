@@ -1,0 +1,26 @@
+.gradient (@color , @colorTo) {
+    background: -moz-linear-gradient(top, @color 0%, @colorTo 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @color), color-stop(100%, @colorTo));
+    background: -webkit-linear-gradient(top, @color 0%, @colorTo 100%);
+    background: -o-linear-gradient(top, @color 0%, @colorTo 100%);
+    background: -ms-linear-gradient(top, @color 0%, @colorTo 100%);
+    background: linear-gradient(top, @color 0%, @colorTo 100%);
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @color, @colorTo));
+}
+
+.placeholder (@color) {    
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        color:    @color;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    @color;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    #999;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color:    @color;
+    }
+}
+
+
