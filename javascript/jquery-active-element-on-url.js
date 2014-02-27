@@ -1,6 +1,6 @@
 $(function(){	
     var url = window.location.href;
-    var baseUrl = $4p.glob('url');
+    var baseUrl = ''; // si la racine est dans un répertoire  
     var rgx  = new RegExp(baseUrl);
     url = decodeURI(url.replace(rgx,'').replace(/\/$/,''));
     $('[data-active-on]').each(function(){       
