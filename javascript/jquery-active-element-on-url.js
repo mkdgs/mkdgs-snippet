@@ -15,7 +15,7 @@ $(function(){
 /************************************************************
 Utilisation 
 
-- nécessite jQuery
+- nécessite jQuery http://jquery.com/
 - précisez l'url du site
 
 tout les éléménent contenant la propriété data-active-on sont testé,
