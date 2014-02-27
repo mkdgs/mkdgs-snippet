@@ -18,10 +18,10 @@ Utilisation
 - nécessite jQuery http://jquery.com/
 - précisez l'url du site
 
-tout les éléménent contenant la propriété data-active-on sont testé,
-si l'url courante correspond a l'expression régulière la class active est ajoutée.
+tout les éléménents contenant la propriété data-active-on sont testés,
+si l'url courante correspond à l'expression régulière la classe active est ajoutée.
 
-<a data-active-on="regex matching current url" >
+<a data-active-on="expression régulière" >
 
 <a data-active-on="/mon/url*" > tout les url qui contienne /mon/url/quelquechose
 
