@@ -1,6 +1,6 @@
 $(function(){	
     var url = window.location.href;
-    var baseUrl = ''; // si la racine est dans un répertoire  
+    var baseUrl = ''; // url du site ( $4p.glob('url'); )
     var rgx  = new RegExp(baseUrl);
     url = decodeURI(url.replace(rgx,'').replace(/\/$/,''));
     $('[data-active-on]').each(function(){       
@@ -14,6 +14,9 @@ $(function(){
 
 /************************************************************
 Utilisation 
+
+- nécessite jQuery
+- précisez l'url du site
 
 tout les éléménent contenant la propriété data-active-on sont testé,
 si l'url courante correspond a l'expression régulière la class active est ajoutée.
