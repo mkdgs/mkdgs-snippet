@@ -1,12 +1,14 @@
 /**
-*
+* @author		Desgranges Mickael
+* @license	CeciLL-B
+* 
 * stick a box on scroll
 * 
+* test it: http://jsfiddle.net/5ABxL/4/
+*
+* use: <div id="sticked" data-stickOnScroll="20"> sticked at 20px from top</div>
+* 
 */
-
-test it: http://jsfiddle.net/5ABxL/4/
-
-<div id="sticked" data-stickOnScroll="20"> sticked at 20px from top</div>
 
 <script>
   $(function() {
