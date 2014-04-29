@@ -8,6 +8,8 @@
 *
 * use: <div id="sticked" data-stickOnScroll="20"> sticked at 20px from top</div>
 * 
+* voir peut être http://stackoverflow.com/questions/18753367/jquery-live-scroll-event-on-mobile-work-around
+* 
 */
 
 <script>
