@@ -2,9 +2,9 @@
 *
 * stick a box on scroll
 * 
-* test it: http://jsfiddle.net/5ABxL/4/
-*
 */
+
+test it: http://jsfiddle.net/5ABxL/4/
 
 <div id="sticked" data-stickOnScroll="20"> sticked at 20px from top</div>
 
