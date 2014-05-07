@@ -69,12 +69,17 @@
 						'default'	: 'option'
 			};
 		        op = jQuery.extend(options, params);				
-			op.$el = $(this);
+			op.$el = $(this); // reference to this DOM object
+			op.that = this;   // reference to this object
 		        			    
 			// awesome code here
 			
 		   	// set data instance
-		   	$(this).data(pluginName, op);		   		   	
+		   	$(this).data(pluginName, op);	
+		   	
+		   	// start to work here 
+		   	
+		   	methods.myMethod.apply(this, [args]);
 	    });	
 	};
 	
