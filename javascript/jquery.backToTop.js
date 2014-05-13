@@ -4,9 +4,12 @@
  * @version 1.1
  *
  *  usage:
- *  <div id="btt">my top button</div>
+ *  <div id="btt" style="position:fixed;bottom:20px;right:10px;">my top button</div>
  *
  *  $("#btt").backToTop();
+ * 
+ * test it:
+ * http://jsfiddle.net/mkdgs/F8Ejp/
  */
  
 (function($){	
