@@ -1,7 +1,7 @@
 /**
  * @author mickael desgranges
  * @desc http://mkdgs.fr
- * @version 1.3
+ * @version 1.4
  */
 (function( $ ){	
 	"use strict";
