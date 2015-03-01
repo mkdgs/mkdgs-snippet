@@ -6,7 +6,10 @@
 (function( $ ){	
 	"use strict";
 	var methods    = {};   
-	var pluginName = 'myPlugin'; // set plugin name
+	var pluginName = 'myPlugin'; 	// set plugin name
+	var options = { 		// set efault options
+		'default'	: 'option'
+	};
 	
 	/* Lazy Loader get script path 
 	 * see	
@@ -64,13 +67,10 @@
 	 		var op = $(this).data(pluginName);
 			if (op) return true; //IHAZ ONE CONTINUE
 			
-			// set + config
-			var options = {
-						'default'	: 'option'
-			};
-		        op = jQuery.extend(options, params);				
-			op.$el = $(this); // reference to this DOM object
-			op.that = this;   // reference to this object
+			op = jQuery.extend({}, options, params);
+        		this[pluginName]=op;	// reference for accessing an instance inside a method
+        		op.$el = $(this); 	// reference to this DOM object
+        		op.that = this; 	// reference to this object
 		        			    
 			// awesome code here
 			
@@ -78,17 +78,28 @@
 		   	$(this).data(pluginName, op);	
 		   	
 		   	// start to work here 
-		   	
-		   	methods.myMethod.apply(this, [args]);
+		   	methods.myMethod.apply(this, [args]); // how to accessing a public method
 	    });	
 	};
 	
-	methods.myMethod = function(arg) {		
-		 var op = $(this).data(pluginName);		
+	
+	/*
+	* public method 
+	* call outside by: $(element).pluginName('method', args... )
+	* call inside by: methods.myMethod.apply(this, [args]); 
+	*/
+	methods.myMethod = function(args) {	
+		 var op = this[pluginName]; // get instance 
+		 		
 		 // code here
 		 
-		 // set data instance
+		 // get/set data instance
+		 // var op = $(this).data(pluginName);
 		 // if any change inside $(this).data(pluginName, op);	
+	};
+	
+	var privateMethod = function(args) {
+			
 	};
 	
 	$.fn[pluginName] = function(m) {
