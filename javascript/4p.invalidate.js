@@ -1,4 +1,12 @@
- if (typeof $4p != 'object')
+ /*
+ * 
+ * mickael desgranges 
+ * return false if valide else return an error code
+ * 
+ * use some part of:
+ * http://bassistance.de/jquery-plugins/jquery-plugin-validation/
+ */
+if (typeof $4p != 'object')
                 $4p = {};
             $4p.invalidate = {
                 _getValue: function (value) {
